@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app='SyligoTesteApp'>
+<head>
+	<title> Syligo Teste </title>
+</head>
+<body>
+	<form name="frm" ng-controller='msgController' ng-submit="submit()" method="post" action="/api/msgSomeone">
+		<div>
+			<label>Nome: </label>
+			<input type="text" name="nome" placeholder="Nome"
+			   	ng-model="user.nome" ng-minlength="4" required>
+			<br>
+			<span ng-show="frm.nome.$dirty && frm.nome.$error.minlength">
+				O nome deve ser acima de 3 caracteres </span>
+		</div>
+			<br>
+
+		<div>
+			<label>Mensagem: </label> 
+			<br>
+			<textarea cols="50" rows="3" name="mensagem" placeholder="Mensagem"
+				  ng-minlength="4" ng-model="user.mensagem" required></textarea>
+			<br>
+			<span ng-show="frm.mensagem.$dirty && frm.mensagem.$error.minlength">
+			 	A mensagem deve ser acima 3 caracteres </span>
+			<br>
+			<button type="submit" ng-disabled="frm.$invalid" ng-click="submitData(this.form)">Submit</button>
+		</div>
+	</form>
+	<script src="lib/angular/angular.min.js"></script>
+	<script src="src/app.js"></script>
+	<script src='lib/angular-route/angular-route.min.js'></script>
+</body>
+</html>
