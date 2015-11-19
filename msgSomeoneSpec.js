@@ -16,5 +16,5 @@ describe('requestPost', function(){
 				expect(res.status).to.equal(200);
 				done();
 			});
-		});
+	});
 });
