@@ -8,7 +8,7 @@ var express   	    = require('express');
 
 app
 	.use(bodyParser())
-    .use(methodOverride())
+    	.use(methodOverride())
 
 	/*.get('*', function (req, res) {
 		res.sendfile('public/main.html');
