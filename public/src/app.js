@@ -11,10 +11,10 @@ angular.module('SyligoTesteApp', ['ngRoute'])
 		}
 		var parameter = JSON.stringify({msgData});
    		 $http.post('/api/msgSomeone', parameter)
-   	 		.success(function() {
+   	 	.success(function() {
         		console.log(msgData);
      		 })
     		.error(function() {
-	       	    console.log("post failed ");
-     	 })
-	}])
+	       	    	console.log("post failed ");
+     	 });
+}]);
