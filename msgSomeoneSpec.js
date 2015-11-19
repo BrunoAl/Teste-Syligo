@@ -2,9 +2,9 @@ var request = require('superagent');
 var expect = require('expect.js');
 var http = require('http');
 var msg = {
-		"nome" : "Bruno",
-		"mensagem" : "Hello Again"
-	 };
+	"nome" : "Bruno",
+	"mensagem" : "Hello Again"
+};
 
 describe('requestPost', function(){
 	it('deve devolver status 200(OK)', function(done){
