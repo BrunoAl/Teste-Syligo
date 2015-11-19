@@ -1,7 +1,7 @@
 angular.module('SyligoTesteApp', ['ngRoute'])
 	.controller('msgController', ['$http', '$scope', function($http, $scope){
 		var self = this;
-		var data = $http.jsonp()
+		var data = $http.jsonp();
 		this.msgData = {nome: 'nome', mensagem: 'mensagem'};
 		
 	}])
