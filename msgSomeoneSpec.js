@@ -12,7 +12,7 @@ describe('requestPost', function(){
 		request.post('http://localhost:9283/api/msgSomeone')
 			.type('form')
 			.send({nome: msg.nome, mensagem: msg.mensagem})
-			.end(function(res){
+			.end(function(err, res){
 				expect(res.status).to.equal(200);
 				done();
 			});
